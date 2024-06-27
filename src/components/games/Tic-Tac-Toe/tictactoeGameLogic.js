@@ -1,4 +1,4 @@
-import { mostRepeatedElement } from '../../../utils'
+import { mostRepeatedElement, shuffleArray } from '../../../utils'
 import {
    handleTictactoeCellClick,
    oSvg,
@@ -45,7 +45,7 @@ export const computerMove = () => {
             .map((move) => move.join(''))
       ]
       console.log(combinedArrays)
-      const mostRepeated = mostRepeatedElement(combinedArrays)
+      const mostRepeated = mostRepeatedElement(shuffleArray(combinedArrays))
       console.log(mostRepeated)
 
       return mostRepeated
@@ -55,7 +55,7 @@ export const computerMove = () => {
          JSON.stringify(gameState.playerFollowUps)
       )
       return mostRepeatedElement(
-         gameState.playerFollowUps.map((move) => move.join(''))
+         shuffleArray(gameState.playerFollowUps).map((move) => move.join(''))
       )
    } else {
       return gameState.availableMoves[

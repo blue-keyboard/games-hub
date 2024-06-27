@@ -1,7 +1,7 @@
 import './style.css'
 import { Header } from './src/components/Header/Header'
 import { Nav } from './src/components/Nav/Nav'
-import { addButtonsEventListeners } from './src/components/Button/Button'
+import { addNavButtonsEventListeners } from './src/components/Button/Button'
 import { Gameboard } from './src/components/Gameboard/Gameboard'
 import { Score } from './src/components/Score/Score'
 import { tictactoeboardAddEventListeners } from './src/components/games/Tic-Tac-Toe/TicTacToeBoard/TicTacToeBoard'
@@ -20,5 +20,5 @@ document.querySelector('header').addEventListener('click', () => {
    location.reload()
 })
 
-addButtonsEventListeners()
+addNavButtonsEventListeners()
 tictactoeboardAddEventListeners()

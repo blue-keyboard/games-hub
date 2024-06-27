@@ -3,7 +3,7 @@ import './Button.css'
 export const createButton = (text, className = 'button') =>
    `<div class="${className}">${text}</div>`
 
-export const addButtonsEventListeners = () => {
+export const addNavButtonsEventListeners = () => {
    const buttons = document.querySelectorAll('.button')
    const gameWrappers = document.querySelectorAll('.gameboard > div')
 

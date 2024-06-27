@@ -1,8 +1,7 @@
 .button {
    display: inline-block;
-   padding: 12px 24px;
-   border-radius: 16px;
-   border: solid, 4px, var(--bg-color);
+   padding: 10px 20px;
+   border: solid, 3px, var(--primary-color);
    background-color: var(--primary-color);
    color: var(--bg-color);
    font-size: 1.3em;
@@ -11,11 +10,11 @@
 }
 
 .button:hover {
-   border: solid, 4px, var(--secondary-color);
+   border: solid, 3px, var(--secondary-color);
 }
 
 .button.active {
    background-color: var(--secondary-color);
-   border: solid, 4px, var(--secondary-color);
+   border: solid, 3px, var(--secondary-color);
    color: var(--primary-color);
 }
