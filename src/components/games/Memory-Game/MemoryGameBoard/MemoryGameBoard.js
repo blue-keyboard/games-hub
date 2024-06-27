@@ -28,7 +28,6 @@ export const Memorygameboard = `
         <div class="cell hide"></div>
     </div>
 `
-
 let waitDisplay = false
 let cells
 
@@ -57,24 +56,24 @@ const onMemorygameCellClick = (event) => {
          memory.pairsCount++
          if (memory.pairsCount === 10) {
             handleGameEnd()
-            return
+         } else {
+            handlePairMatch(cell, memory.currentCellDisplayed)
          }
-         displayPairMatchAnimation(cell, memory.currentCellDisplayed)
-         memory.currentImageId = null
-         memory.currentCellDisplayed = null
       } else {
-         waitDisplay = true
          handleMatchError(cell, memory.currentCellDisplayed)
       }
    }
 }
 
-const displayPairMatchAnimation = (cell1, cell2) => {
+const handlePairMatch = (cell1, cell2) => {
    cell1.classList.add('piece-animation')
    cell2.classList.add('piece-animation')
+   memory.currentImageId = null
+   memory.currentCellDisplayed = null
 }
 
 const handleMatchError = (cell1, cell2) => {
+   waitDisplay = true
    setTimeout(() => {
       cell1.classList.remove('show')
       cell2.classList.remove('show')
@@ -90,7 +89,6 @@ const handleGameEnd = () => {
    cells.forEach((cell) => {
       cell.classList.add('end-animation')
    })
-
    setTimeout(() => {
       const gameboardWrapper = document.querySelector('.memorygame-wrapper')
       gameboardWrapper.innerHTML = winMessage
