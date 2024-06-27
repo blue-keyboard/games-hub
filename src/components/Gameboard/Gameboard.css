@@ -1,0 +1,29 @@
+.gameboard-wrapper {
+   display: flex;
+   justify-content: center;
+   /* align-items: center; */
+   height: 70%;
+   margin: 2em;
+}
+
+.gameboard {
+   /* margin: 1em; */
+   width: 100%;
+   max-width: 600px;
+   aspect-ratio: 6/7;
+   border: 3px solid var(--primary-color);
+}
+
+.gameboard > div {
+   height: 100%;
+   visibility: hidden;
+   opacity: 0;
+   max-height: 0;
+   transition: all 200ms ease-in-out;
+}
+
+.gameboard > div.show {
+   visibility: visible;
+   opacity: 1;
+   max-height: 100%;
+}

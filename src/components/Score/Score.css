@@ -1,0 +1,48 @@
+.score-wrapper {
+   padding: 2em;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 16px;
+}
+
+.score-text {
+   font-size: 2em;
+}
+
+.score-trophies {
+   display: flex;
+   gap: 24px;
+}
+
+.score-trophies svg {
+   color: var(--primary-color);
+   height: 128px;
+   width: 128px;
+   transition: all 200ms ease-in-out;
+}
+
+.score-trophies .won svg {
+   color: var(--secondary-color);
+}
+
+@media screen and (max-width: 500px) {
+   .score-trophies {
+      gap: 16px;
+   }
+
+   .score-trophies svg {
+      height: 96px;
+      width: 96px;
+   }
+}
+
+@media screen and (max-width: 380px) {
+   .score-trophies {
+      gap: 12px;
+   }
+   .score-trophies svg {
+      height: 64px;
+      width: 64px;
+   }
+}

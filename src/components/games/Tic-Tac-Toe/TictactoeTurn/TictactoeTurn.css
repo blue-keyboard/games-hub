@@ -1,0 +1,19 @@
+.tictactoe-turn {
+   display: flex;
+   justify-content: space-evenly;
+   margin: 1em;
+}
+
+.tictactoe-turn > div {
+   padding: 8px;
+   font-size: 20px;
+   border-radius: 4px 6px;
+
+   @media screen and (max-width: 400px) {
+      font-size: 14px;
+   }
+}
+
+.tictactoe-turn > div.active {
+   background-color: var(--secondary-color);
+}
