@@ -22,7 +22,7 @@
    transition: color 150ms ease-in-out;
 }
 
-.cell > svg {
+.tictactoe-board > .cell > svg {
    height: 60%;
    width: 60%;
 }

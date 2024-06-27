@@ -19,10 +19,17 @@ export const addNavButtonsEventListeners = () => {
          button.innerHTML.replace(/\s+/g, '').toLowerCase() + '-wrapper'
       const gameWrapper = document.querySelector(`.${gameWrapperClass}`)
 
-      button.addEventListener('click', () => {
+      button.addEventListener('click', (event) => {
+         if (button.classList.contains('active')) return
+         gameWrappers.forEach((gw) => {
+            if (gw.classList.contains('show')) {
+               gw.classList.remove('show')
+               gw.classList.add('hide')
+            }
+         })
          buttons.forEach((button) => button.classList.remove('active'))
-         gameWrappers.forEach((gw) => gw.classList.remove('show'))
          button.classList.add('active')
+         gameWrapper.classList.remove('hide')
          gameWrapper.classList.add('show')
       })
    })

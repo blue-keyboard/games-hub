@@ -5,6 +5,7 @@ import { addNavButtonsEventListeners } from './src/components/Button/Button'
 import { Gameboard } from './src/components/Gameboard/Gameboard'
 import { Score } from './src/components/Score/Score'
 import { tictactoeboardAddEventListeners } from './src/components/games/Tic-Tac-Toe/TicTacToeBoard/TicTacToeBoard'
+import { placeImagesInMemoryGameBoard } from './src/components/games/Memory-Game/MemoryGameBoard/MemoryGameBoard'
 
 const app = document.querySelector('#app')
 
@@ -22,3 +23,4 @@ document.querySelector('header').addEventListener('click', () => {
 
 addNavButtonsEventListeners()
 tictactoeboardAddEventListeners()
+placeImagesInMemoryGameBoard()

@@ -36,7 +36,7 @@ export const TictactoeBoard = `
 `
 
 export const tictactoeboardAddEventListeners = () => {
-   cells = document.querySelectorAll('.cell')
+   cells = document.querySelectorAll('.tictactoe-board .cell')
    cells.forEach((cell) =>
       cell.addEventListener('click', handleTictactoeCellClick)
    )
@@ -49,7 +49,6 @@ export const handleTictactoeCellClick = (event) => {
 
    if (gameState.playerWon) {
       handleGameEnd('win')
-      localStorage.setItem('tictactoe-win', true)
       return
    } else if (gameState.availableMoves.length === 0) {
       handleGameEnd('tie')

@@ -1,7 +1,7 @@
 .gameboard-wrapper {
    display: flex;
    justify-content: center;
-   /* align-items: center; */
+   align-items: center;
    height: 70%;
 }
 
@@ -13,16 +13,17 @@
    border: 3px solid var(--primary-color);
 }
 
-.gameboard > div {
-   height: 100%;
+.gameboard > div.hide {
+   height: 0;
    visibility: hidden;
    opacity: 0;
-   max-height: 0;
-   transition: all 200ms ease-in-out;
+   /* transition: 200ms ease-in-out; */
 }
 
 .gameboard > div.show {
    visibility: visible;
    opacity: 1;
-   max-height: 100%;
+   width: 100%;
+   aspect-ratio: 6/7;
+   height: auto;
 }
