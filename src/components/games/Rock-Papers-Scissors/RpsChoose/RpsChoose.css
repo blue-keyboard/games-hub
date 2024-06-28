@@ -1,0 +1,65 @@
+.rps-choose {
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   gap: 16px;
+   height: 30%;
+}
+
+.rps-choose > div {
+   height: 70%;
+   padding: 10px;
+   aspect-ratio: 1/1;
+   border: 4px solid var(--primary-color);
+   border-radius: 16px;
+   cursor: pointer;
+
+   @media screen and (max-width: 700px) {
+      padding: 1.5%;
+      border: 0.8vw solid var(--primary-color);
+      border-radius: 2vw;
+   }
+}
+
+.rps-choose > div:hover {
+   background-color: var(--primary-color);
+   color: var(--bg-color);
+}
+
+.rps-choose > div > svg {
+   pointer-events: none;
+}
+
+.rps-end-animation {
+   animation: end-color 0.5s forwards;
+}
+
+.rps-end-animation > svg {
+   height: 100%;
+   width: 100%;
+}
+
+@keyframes end-color {
+   /* 0% {
+      background-color: var(--bg-color);
+      color: var(--primary-color);
+      border-color: var(--primary-color);
+   }
+
+   100% {
+      border-color: var(--secondary-color);
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+   } */
+
+   0% {
+      background-color: var(--bg-color);
+      color: var(--primary-color);
+      border-color: var(--primary-color);
+   }
+   100% {
+      border-color: var(--secondary-color);
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+   }
+}

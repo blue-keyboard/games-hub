@@ -11,4 +11,9 @@
    color: var(--primary-color);
    display: inline-block;
    font-size: 3em;
+
+   @media screen and (max-width: 650px) {
+      margin: 3%;
+      font-size: 5vw;
+   }
 }

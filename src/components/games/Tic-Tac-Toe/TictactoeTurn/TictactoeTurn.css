@@ -6,11 +6,11 @@
 
 .tictactoe-turn > div {
    padding: 8px;
-   font-size: 20px;
+   font-size: 28px;
    border-radius: 4px 6px;
 
-   @media screen and (max-width: 400px) {
-      font-size: 14px;
+   @media screen and (max-width: 700px) {
+      font-size: 4vw;
    }
 }
 

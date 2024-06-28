@@ -4,8 +4,7 @@ import { switchPlayerBanner } from '../TictactoeTurn/TictactoeTurn'
 import {
    loseMessage,
    tieMessage,
-   tryAgainHandleClick,
-   winMessage
+   tryAgainHandleClick
 } from '../../GameEnd/GameEnd'
 import { updateScore } from '../../../Score/Score'
 import { handleMove } from '../tictactoeGameLogic'
@@ -82,12 +81,11 @@ const handleGameEnd = (result) => {
    setTimeout(() => {
       const gameboardWrapper = document.querySelector('.tictactoe-wrapper')
       if (result === 'win') {
-         gameboardWrapper.innerHTML = winMessage
          updateScore('tictactoe')
       } else {
          gameboardWrapper.innerHTML =
             result === 'lose' ? loseMessage : tieMessage
          tryAgainHandleClick('tictactoe-wrapper')
       }
-   }, 1600)
+   }, 1200)
 }

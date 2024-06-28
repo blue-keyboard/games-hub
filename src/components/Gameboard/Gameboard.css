@@ -10,14 +10,19 @@
    width: 100%;
    max-width: 600px;
    aspect-ratio: 6/7;
-   border: 3px solid var(--primary-color);
+   border: 3px solid var(--bg-color);
 }
 
 .gameboard > div.hide {
    height: 0;
    visibility: hidden;
    opacity: 0;
-   /* transition: 200ms ease-in-out; */
+}
+
+.gameboard > div.hide * {
+   height: 0;
+   /* visibility: hidden;
+   opacity: 0; */
 }
 
 .gameboard > div.show {

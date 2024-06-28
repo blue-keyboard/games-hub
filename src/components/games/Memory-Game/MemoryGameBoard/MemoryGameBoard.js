@@ -90,8 +90,6 @@ const handleGameEnd = () => {
       cell.classList.add('end-animation')
    })
    setTimeout(() => {
-      const gameboardWrapper = document.querySelector('.memorygame-wrapper')
-      gameboardWrapper.innerHTML = winMessage
       updateScore('memorygame')
-   }, 1600)
+   }, 1000)
 }

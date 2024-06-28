@@ -1,0 +1,19 @@
+.rps-board {
+   height: 40%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.rps-board > div {
+   height: 75%;
+   aspect-ratio: 1/1;
+}
+
+.rps-player-move > svg {
+   transform: rotate(45deg);
+}
+
+.rps-computer-move > svg {
+   transform: scaleX(-1) rotate(45deg);
+}
