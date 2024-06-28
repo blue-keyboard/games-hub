@@ -1,4 +1,3 @@
-import { globals } from '../../../globals'
 import { createButton } from '../../Button/Button'
 import { RpsBoard } from '../Rock-Papers-Scissors/RpsBoard/RpsBoard'
 import {
@@ -15,13 +14,6 @@ import { TictactoeTurn } from '../Tic-Tac-Toe/TictactoeTurn/TictactoeTurn'
 import { tictactoeGameState } from '../Tic-Tac-Toe/tictactoeGameState'
 import './GameEnd.css'
 import { RPS } from '../Rock-Papers-Scissors/RockpaperscissorsObject'
-
-export const winMessage = `
-    <div class="message">
-        <div class="message--text">You won!</div>
-        ${globals.TROPHY_SVG}
-    </div>
-`
 
 export const loseMessage = `
     <div class="message">

@@ -3,7 +3,6 @@ import './Score.css'
 
 export const Score = `
     <div class="score-wrapper">
-        <div class="score-text">Score:</div>
         <div class="score-trophies">
             ${
                localStorage.getItem('tictactoe-win')
@@ -48,4 +47,20 @@ export const updateScore = (game) => {
       document.querySelector('.trophy-3').classList.add('won')
    }
    globals.score++
+   if (globals.score === 3) {
+      localStorage.setItem('finish', true)
+      setTimeout(() => {
+         updateHeader()
+      }, 1000)
+   }
+}
+
+export const updateHeader = () => {
+   const headerTitle = document.querySelector('.header-title')
+   headerTitle.innerHTML = 'Play Again!'
+   headerTitle.style.cursor = 'pointer'
+   headerTitle.addEventListener('click', () => {
+      localStorage.clear()
+      location.reload()
+   })
 }

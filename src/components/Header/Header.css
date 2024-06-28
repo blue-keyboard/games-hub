@@ -1,10 +1,9 @@
 .header {
    display: flex;
    justify-content: center;
-   cursor: pointer;
 }
 
-.header_title {
+.header-title {
    margin: 16px;
    padding: 4px 16px;
    background-color: var(--secondary-color);

@@ -1,6 +1,5 @@
 import { shuffleArray } from '../../../../utils'
 import { updateScore } from '../../../Score/Score'
-import { winMessage } from '../../GameEnd/GameEnd'
 import { memory } from '../memorygameObject'
 import './MemorygameBoard.css'
 
