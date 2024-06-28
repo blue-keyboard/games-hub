@@ -46,8 +46,12 @@ export const updateScore = (game) => {
       localStorage.setItem('rockpaperscissors-win', true)
       document.querySelector('.trophy-3').classList.add('won')
    }
-   globals.score++
-   if (globals.score === 3) {
+
+   if (
+      localStorage.getItem('tictactoe-win') &&
+      localStorage.getItem('memorygame-win') &&
+      localStorage.getItem('rockpaperscissors-win')
+   ) {
       localStorage.setItem('finish', true)
       setTimeout(() => {
          updateHeader()

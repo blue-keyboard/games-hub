@@ -54,6 +54,8 @@ const onMemorygameCellClick = (event) => {
       if (memory.currentImageId === cell.id) {
          memory.pairsCount++
          if (memory.pairsCount === 10) {
+            cell.classList.add('fixed-color')
+            memory.currentCellDisplayed.classList.add('fixed-color')
             handleGameEnd()
          } else {
             handlePairMatch(cell, memory.currentCellDisplayed)
@@ -69,6 +71,12 @@ const handlePairMatch = (cell1, cell2) => {
    cell2.classList.add('piece-animation')
    memory.currentImageId = null
    memory.currentCellDisplayed = null
+   setTimeout(() => {
+      cell1.classList.add('fixed-color')
+      cell2.classList.add('fixed-color')
+      cell1.classList.remove('piece-animation')
+      cell2.classList.remove('piece-animation')
+   }, 600)
 }
 
 const handleMatchError = (cell1, cell2) => {
@@ -85,10 +93,11 @@ const handleMatchError = (cell1, cell2) => {
 }
 
 const handleGameEnd = () => {
-   cells.forEach((cell) => {
-      cell.classList.add('end-animation')
-   })
+   for (let cell of cells) {
+      cell.classList.add('end')
+   }
+
    setTimeout(() => {
       updateScore('memorygame')
-   }, 1000)
+   }, 1500)
 }
